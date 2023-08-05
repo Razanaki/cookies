@@ -3,8 +3,10 @@ Site de biscoitos
 
 Projeto voltado para um negócio fictício de biscoitos que tem como finalidade praticar o que foi aprendido em programação WEB.
 
-Recursos usados nesse projeto:
+Recursos usados no momento e futuramente nesse projeto:
 HTML
 CSS
-Javascript
+Javascript (futuramente)
 Bootstrap
+PHP (futuramente)
+MySQL (futuramente)
