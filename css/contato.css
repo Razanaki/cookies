@@ -89,15 +89,19 @@ header ul{
 	list-style-type: none;
 }
 
-#menu li input{
+#busca{
 	width: 182px;
 	background-color: #b0610c;
 	border: none;
 	height: 30px;
-
+	transition-duration: 2s;
 }
 
-#menu input::placeholder{
+#busca.ativo {
+	width: 300px;
+}
+
+#busca::placeholder{
 	color: #fff;
 }
 
@@ -106,7 +110,7 @@ header ul{
 	background-color: #b0610c;
 	position: absolute;
 	top: 23px;
-	left: 816px;
+	left: 93%;
 	padding: 0px;
 	font-size: 15px;
 

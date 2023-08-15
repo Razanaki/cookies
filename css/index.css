@@ -62,6 +62,7 @@ header .header-white li.youtube{
 		font-family: "Open-Sans";
 }
 
+
 #menu li a {
 	color:#fff;
 	font-size: 16px;
@@ -72,10 +73,10 @@ header .header-white li.youtube{
 
 
 header .header-white li a {
-width: 32px;
-height: 32px;
-display: block;
-margin: 5px;
+	width: 32px;
+	height: 32px;
+	display: block;
+	margin: 5px;
 }
 
 header #logotipo {
@@ -89,15 +90,20 @@ header ul{
 	list-style-type: none;
 }
 
-#menu li input{
+#busca{
 	width: 182px;
 	background-color: #b0610c;
 	border: none;
 	height: 30px;
-
+	transition-duration: 2s;
 }
 
-#menu input::placeholder{
+#busca.ativo {
+	width: 300px;
+}
+
+
+#busca::placeholder{
 	color: #fff;
 }
 
@@ -106,10 +112,14 @@ header ul{
 	background-color: #b0610c;
 	position: absolute;
 	top: 23px;
-	left: 816px;
+	left: 93%;
 	padding: 0px;
 	font-size: 15px;
 
+}
+
+#menu li.search .input-group {
+	top: 8px;
 }
 
 #banner img{

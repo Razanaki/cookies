@@ -34,6 +34,7 @@
 							<li><input type="search" id="busca" placeholder="Procurar por..."></li>
 							<span class="input-group-btn">
 								<button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+							</span>
 						</div>
  					</li>
 				</ul>
@@ -125,69 +126,8 @@
 
 
 
-
-
-
-
-
 					</div>
 				</form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -214,31 +154,6 @@
 
 
 		</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 	</body>
@@ -305,6 +220,21 @@
 
 	<script src="lib/jquery/jquery.min.js"> </script>	
 	<script src="lib/bootstrap/js/bootstrap.min.js"> </script>
+	<script>
+		$(document).ready(function() {
+
+			$("#busca").on("focus", function(){
+
+				$("#busca").addClass("ativo");
+
+			}).on("blur", function(){
+
+				$("#busca").removeClass("ativo");				
+
+			});
+
+		});
+	</script>
 </html>
 
 
