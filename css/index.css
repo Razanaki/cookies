@@ -186,6 +186,16 @@ header ul{
 	color: #A7A7A7;
 }
 
+#noticias .thumbnails .item-inner{
+	padding: 15px;
+}
+
+#noticias .thumbnails .item-inner img{
+	width: 100%;
+}
+
+
+
 #estatisticas {
 	background-color: #E39153;
 	width: 100%;
