@@ -4,6 +4,8 @@
 		<meta charset="utf-8">
 		<title>O Portal das Biscoiteiras</title>
 		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="lib/owl-carousel2/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="lib/owl-carousel2/assets/owl.theme.default.min.css">
 		<link rel="stylesheet" href="fontawesome/css/all.css">
 		<link rel="stylesheet" href="css/index.css">
 	</head>
@@ -65,32 +67,55 @@
 			<hr></hr>
 		</div>
 		
-		<div class="row thumbnails">
-			<div class="col-md-3">
-				
-				<img src="img/noticia1.jpg" alt="Primeira noticia" width="300" height="200">
-				<h3>Tipos de biscoitos no mundo todo</h3>
-				<time>Junho 6, 2023</time>
+		<div class="row thumbnails owl-carousel owl-theme">
+			<div class="item">
+				<div class="item-inner">
+					<img src="img/noticia1.jpg" alt="Primeira noticia" width="300" height="200">
+					<h3>Tipos de biscoitos no mundo todo</h3>
+					<time>Junho 6, 2023</time>
+				</div>
 			</div>
 
-			<div class="col-md-3">
-			
-				<img src="img/noticia2.jpg" alt="Primeira noticia" width="300" height="200">
-				<h3>A história do biscoito</h3>
-				<time>Maio 5, 2023</time>
+			<div class="item">
+				<div class="item-inner">
+					<img src="img/noticia2.jpg" alt="Primeira noticia" width="300" height="200">
+					<h3>A história do biscoito</h3>
+					<time>Maio 5, 2023</time>
+				</div>
 			</div>
 			
-			<div class="col-md-3">
-				<img src="img/noticia3.jpg" alt="Primeira noticia" width="300" height="200">
-				<h3>10 curiosidades sobre biscoitos</h3>
-				<time>Fevereiro 11, 2023</time>
+			<div class="item">
+				<div class="item-inner">
+					<img src="img/noticia3.jpg" alt="Primeira noticia" width="300" height="200">
+					<h3>10 curiosidades sobre biscoitos</h3>
+					<time>Fevereiro 11, 2023</time>
+				</div>
 			</div>
 
-			<div class="col-md-3">
-				<img src="img/noticia4.jpg" alt="Primeira noticia" width="300" height="200">
-				<h3>Lançamento do site e cupons de desconto para os primeiros usuários</h3>
-				<time>Janeiro 13, 2023</time>
+			<div class="item">
+				<div class="item-inner">
+					<img src="img/noticia4.jpg" alt="Primeira noticia" width="300" height="200">
+					<h3>Lançamento do site e cupons de desconto para os primeiros usuários</h3>
+					<time>Janeiro 13, 2023</time>
+				</div>
 			</div>
+
+			<div class="item">
+				<div class="item-inner">
+					<img src="img/noticia4.jpg" alt="Primeira noticia" width="300" height="200">
+					<h3>Noticia 2</h3>
+					<time>Janeiro 13, 2023</time>
+				</div>
+			</div>
+
+			<div class="item">
+				<div class="item-inner">
+					<img src="img/noticia4.jpg" alt="Primeira noticia" width="300" height="200">
+					<h3>Noticia 1</h3>
+					<time>Janeiro 13, 2023</time>
+				</div>
+			</div>
+
 		</div>
 	</div>
 
@@ -197,6 +222,7 @@
 
 
 	<script src="lib/jquery/jquery.min.js"> </script>	
+	<script src="lib/owl-carousel2/owl.carousel.min.js"> </script>
 	<script src="lib/bootstrap/js/bootstrap.min.js"> </script>
 	<script>
 		$(document).ready(function() {
@@ -210,6 +236,20 @@
 				$("#busca").removeClass("ativo");				
 
 			});
+
+		$(".thumbnails").owlCarousel({
+			loop:true,
+			//nav: true,
+			navText:["Anterior", "Próximo"],
+			responsive: {
+				0:{item: 1},
+				480:{item:3},
+				768:{item: 4},
+				1200:{item: 6}
+			}
+
+		});
+
 
 		});
 	</script>
