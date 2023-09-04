@@ -1,0 +1,164 @@
+footer *{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+footer .row-marrom{
+	height: 80px;
+	background-color: #b0610c;
+	border: none;
+	position: absolute;
+}
+
+footer .row-alaranjado{
+	background-color: #E39153;
+	height: 270px;
+	border: none;
+
+}
+
+
+footer .float-md-start {
+	color: #fff;
+	font-family: 'Open-Sans';
+	font-weight: bold;
+	font-size: 14px;
+	text-align: left;
+	margin-top: 55px;
+}
+
+footer .float-md-end {
+	color: #fff;
+	font-family: 'Open-Sans';
+	font-weight: bold;
+	font-size: 14px;
+	text-align: right;
+	position: absolute;
+	left: -293px;
+	margin-top: 55px;
+}
+
+footer .logotipo {
+	margin-top: 50px;
+	margin-left: -5px;
+	height: 140px;
+	width: 140px;
+}
+footer .col-posts-populares, 
+footer .col-links,
+footer .col-contato{
+	margin-top: 40px;
+}
+
+
+footer .row-cols h4{
+	font-family: 'Open-Sans';
+	font-size: 16px;
+	color: #fff;
+	padding-bottom: 17px;
+	border-bottom: 1px solid;
+	text-align: left;
+
+}
+
+footer .row-cols h5{
+
+	font-family: Arial;
+	font-size: 18px;
+	margin-bottom: 0;
+	margin-top: 10px;
+	color: #fff;
+
+}
+
+footer .row-cols li{
+	text-align: left;
+
+}
+
+
+footer .row-cols time {
+	color: #666;
+	font-family: Arial;
+	font-size: 14px;
+	margin-top: 0;
+
+}
+
+
+
+footer .col-links i{
+	text-align: left;
+	display: inline-block;
+
+}
+
+footer .col-links a {
+	color: #FFF;
+	font-size: 15px;
+	font-family: 'Open-Sans';
+}
+
+footer .col-links li {
+		margin-top: 10px;
+
+}
+
+footer .col-contato a {
+	color: #fff;
+	font-family: Arial;
+	font-size: 14px;
+
+}
+
+
+
+footer .col-contato .fa-location-dot {
+	color: #fff;
+	font-size: 25px;
+	display: inline-block;
+	text-align: left;
+	margin-top: 10px;
+}
+
+footer .col-contato  span{
+	display: inline-block;
+	color:#fff;
+	font-family: Arial;
+	font-size: 14px;
+
+	text-align: left;
+	margin-left: 40px;
+	position: relative;	
+	top: -32px;
+}
+
+
+
+
+footer .col-contato p {
+	color: #fff;
+	text-align: left;
+	margin-left:40px;
+	position: relative;
+	top: -32px;
+	font-size: 24px;
+
+}
+
+footer .col-contato .fa-phone{
+	position: relative;
+	color: #fff;
+	font-size: 25px;
+	display: inline-block;
+	text-align: left;
+	left: -10px;
+}
+
+
+
+
+
+
+
