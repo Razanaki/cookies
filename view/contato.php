@@ -117,10 +117,3 @@
 <?php include_once("footer.php");
 ?>
 
-<?php 
-	if (isset($_POST['submit'])) {
-		$post_data = file_get_contents('php://input');
-		echo "<div>DEU CERTO!</div>";
-	}
-
-?>
