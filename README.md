@@ -6,7 +6,7 @@ Projeto voltado para um negócio fictício de biscoitos que tem como finalidade 
 Recursos usados no momento e futuramente nesse projeto:
 HTML
 CSS
-Javascript (futuramente)
+Javascript 
 Bootstrap
-PHP (futuramente)
+PHP 
 MySQL (futuramente)
