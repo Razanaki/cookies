@@ -27,22 +27,22 @@
 				</div>
 			
 				
-				<form method="post">
+				<form action="arquivo.php" method="post">
 					<div class="form-row">
 						<div class="col">	
-							<input type="text" class="form-control" id="NomeDaPessoa" placeholder="Nome">
+							<input type="text" class="form-control" name="nome" id="NomeDaPessoa" placeholder="Nome">
 						</div> 
 						
 						<div class="col">
-							<input type="text" class="form-control" id="SobrenomeDaPessoa" placeholder="Sobrenome">
+							<input type="text" class="form-control" name="sobrenome" id="SobrenomeDaPessoa" placeholder="Sobrenome">
 						</div>
 				
 						<div class="col">
-						<input type="email" class="form-control" id="EmailDaPessoa" placeholder="Email">
+						<input type="email" class="form-control" name="email" id="EmailDaPessoa" placeholder="Email" autocomplete="on">
 						</div>
 
 
-						<select id="SexoDaPessoa" class="form-control">
+						<select id="GeneroDaPessoa" name="genero" class="form-control">
 							<option selected>Gênero</option>
 							<option>Feminino</option>
 							<option>Masculino</option>
@@ -51,7 +51,7 @@
 
 						<div class="form-group">
 							<label for="MensagemDaPessoa">Mensagem</label>
-							<textarea class="form-control" id="MensagemDaPessoa" rows="7"></textarea>
+							<textarea class="form-control" name="mensagem" id="MensagemDaPessoa" rows="7"></textarea>
 						</div>
 
 
