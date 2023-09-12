@@ -27,7 +27,7 @@
 				</div>
 			
 				
-				<form action="arquivo.php" method="post">
+				<form action="../connect/conexao_contato.php" method="post">
 					<div class="form-row">
 						<div class="col">	
 							<input type="text" class="form-control" name="nome" id="NomeDaPessoa" placeholder="Nome">
