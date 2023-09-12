@@ -9,11 +9,11 @@ $conn = mysqli_connect("localhost", "root", "", "bixcoito");
 
 
 	$NomeDaPessoa = mysqli_real_escape_string($conn, $_POST['nome']);
-	$SobrenomeDaPessoa = $_REQUEST['sobrenome'];
-	$EmailDaPessoa = $_REQUEST['email'];
-	$GeneroDaPessoa = $_REQUEST['genero'];
-	$MensagemDaPessoa = $_REQUEST['mensagem'];
-	$ClienteDaPlataforma = $_REQUEST['ClienteDaPlataforma'];
+	$SobrenomeDaPessoa = $_POST['sobrenome'];
+	$EmailDaPessoa = $_POST['email'];
+	$GeneroDaPessoa = $_POST['genero'];
+	$MensagemDaPessoa = $_POST['mensagem'];
+	$ClienteDaPlataforma = $_POST['ClienteDaPlataforma'];
 
 	$sql = "INSERT INTO contato (nome, sobrenome, email, genero, mensagem, usuario) values ('$NomeDaPessoa', '$SobrenomeDaPessoa', '$EmailDaPessoa', '$GeneroDaPessoa', '$MensagemDaPessoa', '$ClienteDaPlataforma')";
 
@@ -23,7 +23,7 @@ $conn = mysqli_connect("localhost", "root", "", "bixcoito");
 		echo("\n$NomeDaPessoa\n $SobrenomeDaPessoa\n $EmailDaPessoa\n $GeneroDaPessoa\n $MensagemDaPessoa\n $ClienteDaPlataforma");
 	}	
 		else {
-			echo "Erro: tem parada errada aí"
+			echo "<p> Erro: dados não foram armazenados. </p>"
 			. mysqli_error($conn);
 		}
 mysqli_close($conn);
