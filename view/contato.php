@@ -78,18 +78,8 @@
 				
 						<button type="submit" class="btn btn-primary">Enviar</button>
 
-
-
-
-
 					</div>
 				</form>
-
-
-
-
-
-
 
 
 				<div class="col col-clientes">
@@ -106,9 +96,6 @@
 
 		</div>
 
-
-
-
 		</div>
 
 
@@ -116,4 +103,3 @@
 	
 <?php include_once("footer.php");
 ?>
-

@@ -35,7 +35,7 @@
 		
 				<div class="col-md-4">
 					<h3> Bianca Honda </h3>
-					<img src="../img/creator2.jpg" alt="Criadora" width="50%">
+					<img src="../img/creator2.jpg" alt="Criadora" width="50%" >
 					<p> Saudações! Me chamo Bianca e estou montando um site voltado para biscoitos. Obviamente eu não pretendo montar um negócio real focado em biscoitos, todo o projeto foi feito para estudar e colocar em prática o que aprendi nas minhas aulas para um dia, trabalhar com programação. Caso tenha interesse em outros projetos meus (e se não chegou por lá), dê uma olhada no meu GitHub! <a href="https://github.com/Razanaki">https://github.com/Razanaki</a></p> 
 
 				</div>
