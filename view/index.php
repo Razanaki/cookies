@@ -107,7 +107,7 @@
 				</div>
 
 				<div class="col-xs-6">
-					<a href="#" class="btn btn-secondary">Cadastre-se</a>
+					<a href="logincadastro.php" class="btn btn-secondary">Entre ou cadastre-se</a>
 				
 		</div>
 	</div>
