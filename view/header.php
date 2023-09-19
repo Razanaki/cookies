@@ -33,6 +33,7 @@
 					<li><a href="../view/aboutus.php">Sobre</a></li>
 					<li><a href="../view/contato.php">Contato</a></li>
 					<li><a href="#">Venha biscoitar</a></li>
+					<li><a href="../view/logincadastro.php">Entre / Cadastre-se</a></li>
 					<li class="search">
 						<div class="input-group">
 							<li><input type="search" id="busca" placeholder="Procurar por..."></li>
