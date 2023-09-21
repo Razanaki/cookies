@@ -1,0 +1,59 @@
+h3{
+	text-align: center;
+	color: #E39153;
+	font-size: 48px;
+	font-family: 'Open-Sans';
+	text-transform: uppercase;
+	}
+
+body .col-user{
+	margin-top: 60px;
+	margin-left: 100px;
+	font-size: 25px;
+
+}
+
+#usuariologin {
+	width: 300px;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+body .col-password{
+	margin-top: 30px;
+	margin-left: 100px;
+	font-size: 25px;
+}
+
+#senhalogin {
+	width: 300px;
+	display: inline-block;
+	margin-left: 27px;
+}
+
+body .col-usuario .col-botao {
+	margin-top: 30px;
+	margin-bottom: 200px;
+	margin-left: 100px;
+}
+
+body .col-usuario .col-botao .btn-primary{
+	width: 407px;
+}
+
+body .col-cadastro .col-email{
+	font-size: 25px;
+	margin-top: 60px;
+	margin-left: 80px;
+}
+
+#emaillogin{
+	width: 400px;
+	display: inline-block;
+}
+
+body .col-cadastro .col-botao .btn-primary {
+	width: 480px;
+	margin-top: 30px;
+	margin-left: 80px;
+}
