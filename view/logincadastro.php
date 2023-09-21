@@ -17,19 +17,32 @@
 				<div class="row">
 					<div class="col col-usuario">
 						<h3> Entrar com usuário </h3>
-							<label for="usuariologin">Usuário: </label>
-							<input type="text" class="form-control" name="usuario" id="usuariologin">
-							<label for="senhalogin">Senha: </label>
-							<input type="password" class="form-control" name="senha" id="senhalogin">
-							<button type="submit" class="btn btn-primary"> Entrar </button>
+
+							<div class="col-user">
+								<label for="usuariologin">Usuário: </label>
+								<input type="text" class="form-control" name="usuario" id="usuariologin">
+							</div> 
+
+							<div class="col-password">
+								<label for="senhalogin">Senha: </label>
+								<input type="password" class="form-control" name="senha" id="senhalogin">
+							</div>
+
+							<div class="col-botao">
+								<button type="submit" class="btn btn-primary"> Entrar </button>
+							</div>
 					</div>
 				
 			
 					<div class="col col-cadastro">
-						<h3> Criar uma conta </h3>
-							<label for="emaillogin">E-mail</label>
-							<input type="email" class="form-control" name="email" id="emaillogin" autocomplete="on">
-							<button type="submit" class="btn btn-primary"> Cadastrar </button>
+						<h3> Criar nova conta </h3>
+							<div class="col-email">
+							<label for="emaillogin">E-mail: </label>
+								<input type="email" class="form-control" name="email" id="emaillogin" autocomplete="on">
+							</div>
+							<div class="col-botao">
+								<button type="submit" class="btn btn-primary"> Cadastrar </button>
+							</div>
 					</div>
 				</div>
 
