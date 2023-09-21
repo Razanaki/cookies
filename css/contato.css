@@ -57,10 +57,19 @@ body .col-clientes p {
 	margin-top: 10px;
 }
 
+
+body .form-row label[for=GeneroDaPessoa] {
+
+	margin-top: 10px;
+}
+
+
 #GeneroDaPessoa {
-	width: 412px;
+	width: 343px;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	display: inline-block;
+	margin-left: 10px;
 }
 
 body .col-formulario{
@@ -71,9 +80,6 @@ body .form-check {
 	margin-left: 15px;
 	margin-top: 5px;
 }
-
-
-
 
 body #MensagemDaPessoa {
 	width: 410px;
