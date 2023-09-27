@@ -1,0 +1,103 @@
+@font-face {
+	font-family: 'Open-Sans';
+	src: url("../fonte/static/OpenSans-Regular.ttf");
+	font-size: 1em;
+}
+
+@font-face {
+	font-family: 'Open-Sans-Light';
+	src: url("../fonte/static/OpenSans-Light.ttf");
+	font-size: 1em;
+}
+
+
+
+
+
+body h3 {
+	font-family: 'Open-Sans';
+	text-align: center;
+	color: #E39153;
+	text-transform: uppercase;
+	font-size: 48px;
+	margin-top: 100px;
+	margin-bottom: 50px;
+}
+
+label {
+	font-family: 'Open-Sans';
+	margin-left: 600px;
+}
+
+
+#emailusuario {
+	width: 400px;
+	display: inline-block;
+	padding: 4;
+
+
+}
+
+#usuario {
+	width: 400px;
+	display: inline-block;
+	padding: 4;
+}
+
+#nomeusuario {
+	width: 400px;
+	display: inline-block;
+	padding: 4;
+}
+
+#sobrenomeusuario {
+	width: 400px;
+	display: inline-block;
+	padding: 4;
+}
+
+#generousuario {
+	width: 400px;
+	display: inline-block;
+	padding: 4;
+}
+
+#senhausuario {
+	width: 400px;
+	display: inline;
+	padding: 4;
+}
+ 
+small {
+	margin-left: 600px;
+	color: grey;
+	position: absolute;
+	margin-top: -20px;
+}
+
+div .lugardaconfirmacao {
+	margin-top: -30px;
+}
+#confirmacaosenha {
+	width: 400px;
+	display: inline-block;
+	padding: 4;
+}
+
+#termosdeuso {
+	padding: 20px;
+	margin-left: 600px;
+}
+
+#checkacordo {
+	margin-left: 600px;
+}
+
+label.check {
+	margin-left: 10;
+}
+
+form button {
+		margin-left: 600px;
+		margin-bottom: 100px;
+}
