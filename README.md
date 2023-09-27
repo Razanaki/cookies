@@ -9,4 +9,4 @@ CSS
 Javascript 
 Bootstrap
 PHP 
-MySQL (futuramente)
+MySQL
