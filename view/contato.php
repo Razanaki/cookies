@@ -59,15 +59,15 @@
 
 						<fieldset class="form-group">
 							<div class="row">
-								<div class="form-check">
-								<input class="form-check-input" type="radio" name="ClienteDaPlataforma" id="ClienteDaPlataforma" value="opcao1" checked>
+								<div class="form-check" >
+								<input class="form-check-input" type="radio" name="ClienteDaPlataforma" id="ClienteDaPlataforma" value="1" required>
 									<label class="form-check-label" for ="ClienteDaPlataforma">
 									Sou usuário da plataforma
 									</label>
 								</div>
 						
 								<div class="form-check">
-									<input class="form-check-input" type="radio" name="ClienteDaPlataforma" id="NaoSouCliente" value="opcao2">
+									<input class="form-check-input" type="radio" name="ClienteDaPlataforma" id="NaoSouCliente" value="2">
 									<label class="form-check-label" for="NaoSouCliente">
 									Não sou usuário da plataforma
 									</label>
