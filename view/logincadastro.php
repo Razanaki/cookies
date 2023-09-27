@@ -20,12 +20,12 @@
 
 							<div class="col-user">
 								<label for="usuariologin">Usuário: </label>
-								<input type="text" class="form-control" name="usuario" id="usuariologin">
+								<input type="text" class="form-control" name="usuario" id="usuariologin" required>
 							</div> 
 
 							<div class="col-password">
 								<label for="senhalogin">Senha: </label>
-								<input type="password" class="form-control" name="senha" id="senhalogin">
+								<input type="password" class="form-control" name="senha" id="senhalogin" required>
 							</div>
 
 							<div class="col-botao">
@@ -38,10 +38,10 @@
 						<h3> Criar nova conta </h3>
 							<div class="col-email">
 							<label for="emaillogin">E-mail: </label>
-								<input type="email" class="form-control" name="email" id="emaillogin" autocomplete="on">
+								<input type="email" class="form-control" name="email" id="emaillogin" autocomplete="on" required>
 							</div>
 							<div class="col-botao">
-								<button type="submit" class="btn btn-primary"> Cadastrar </button>
+								<button type="submit" class="btn btn-primary" onclick="document.location='cadastro.php'"> Cadastrar </button>
 							</div>
 					</div>
 				</div>
