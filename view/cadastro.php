@@ -6,22 +6,22 @@ include_once("header.php");
 
 <body>
 
-	<form>
-		<div class="divisao">
+	<form action="../connect/conexao_cadastro.php" method="post">
+		
 			<h3> Cadastro </h3>
 		<form class="form-group">
 
 		    <label for="emailusuario">Email address:</label>
-		    <input type="email" class="form-control" id="emailusuario" placeholder="name@example.com" autocomplete="on" required> <br> </br>
+		    <input type="email" class="form-control" name="emailusuario" id="emailusuario" placeholder="nome@exemplo.com" autocomplete="on" required> <br> </br>
 
 			<label for="usuario">Usuário:</label>
-			<input type="text" class="form-control" id="usuario" required> <br> </br>
+			<input type="text" class="form-control" name="contausuario" id="contausuario" required> <br> </br>
 
 			<label for="nomeusuario">Nome:</label>
-			<input type="text" class="form-control" id="nomeusuario" required> <br> </br>
+			<input type="text" class="form-control" name="nomeusuario" id="nomeusuario" required> <br> </br>
 
 			<label for="sobrenomeusuario">Sobrenome:</label>
-			<input type="text" class="form-control" id="sobrenomeusuario" required> <br> </br>
+			<input type="text" class="form-control" name="sobrenomeusuario" id="sobrenomeusuario" required> <br> </br>
 
 				<label for="generousuario">Gênero: </label>
 						<select id="generousuario" name="genero" class="form-control" placeholder="Gênero" required >
@@ -110,11 +110,11 @@ Ao usar o Marketplace de Biscoitos, você concorda em cumprir estes Termos de Us
 			<label class="check" for="checkacordo"> Li e concordo com os termos de uso.</label> <br> </br>
 	
 	 
-  			<button type="submit" class="btn btn-primary">Sign in</button>
+  			<button type="submit" class="btn btn-primary">Cadastrar</button>
 		</form>
 
 
-	</div>
+	
 	</form>
 
 </body>
