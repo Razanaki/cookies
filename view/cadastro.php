@@ -33,14 +33,14 @@ include_once("header.php");
 
 			<div class="lugardasenha">
 				<label for="senhausuario">Senha:</label>
-				<input type="password" class="form-control" id="senhausuario" name="senhausuario" required> <br> </br>
+				<input type="password" class="form-control" id="senhausuario" name="senhausuario" minlength="8" maxlength="20" required> <br> </br>
 				<small> A senha deve ter de 8 a 20 caracteres, uma letra maiúscula, um caractere especial e número.</small> <br> </br>
 			</div>
 
 	
 			<div class="lugardaconfirmacao">
 				<label for="confirmacaosenha">Confirme sua senha:</label>
-				<input type="password" class="form-control" id="confirmacaosenha"  required> <br> </br>
+				<input type="password" class="form-control" id="confirmacaosenha"  minlength="8" maxlength="20" required> <br> </br>
 			
 			</div>
 			
