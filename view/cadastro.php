@@ -14,7 +14,7 @@ include_once("header.php");
 		    <label for="emailusuario">Email address:</label>
 		    <input type="email" class="form-control" name="emailusuario" id="emailusuario" placeholder="nome@exemplo.com" autocomplete="on" required> <br> </br>
 
-			<label for="usuario">Usuário:</label>
+			<label for="contausuario">Usuário:</label>
 			<input type="text" class="form-control" name="contausuario" id="contausuario" required> <br> </br>
 
 			<label for="nomeusuario">Nome:</label>
@@ -31,17 +31,17 @@ include_once("header.php");
 							<option>Não-binário</option>
 						</select> <br> </br>
 
-
-
 			<div class="lugardasenha">
 				<label for="senhausuario">Senha:</label>
-				<input type="password" class="form-control" id="senhausuario" required> <br> </br>
+				<input type="password" class="form-control" id="senhausuario" name="senhausuario" required> <br> </br>
 				<small> A senha deve ter de 8 a 20 caracteres, uma letra maiúscula, um caractere especial e número.</small> <br> </br>
 			</div>
 
+	
 			<div class="lugardaconfirmacao">
 				<label for="confirmacaosenha">Confirme sua senha:</label>
-				<input type="password" class="form-control" id="confirmacaosenha" required> <br> </br>
+				<input type="password" class="form-control" id="confirmacaosenha"  required> <br> </br>
+			
 			</div>
 			
 
