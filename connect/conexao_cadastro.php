@@ -16,10 +16,10 @@
 		$sql = "INSERT INTO usuario (usuario, nome, sobrenome, email, genero, senha) values ('$contausuario', '$nomeusuario', '$sobrenomeusuario', '$emailusuario', '$generousuario', '$senhausuario')";
 
 		mysqli_query($conn, $sql);
-
+		echo "'$emailusuario', '$contausuario', '$nomeusuario', '$sobrenomeusuario', '$generousuario', '$senhausuario'";
 		mysqli_close($conn);
 
-		echo "'$emailusuario', '$contausuario', '$nomeusuario', '$sobrenomeusuario', '$generousuario', '$senhausuario'";
+
 
 		
 ?>
