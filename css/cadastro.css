@@ -50,10 +50,24 @@ label {
 	padding: 4;
 }
 
+#nomeinvalido {
+    color: red;
+    margin-left: 655px;
+    position: absolute;
+    margin-top: -20px;
+}
+
 #sobrenomeusuario {
 	width: 400px;
 	display: inline-block;
 	padding: 4;
+}
+
+#sobrenomeinvalido {
+    color: red;
+    margin-left: 655px;
+    position: absolute;
+    margin-top: -20px;
 }
 
 #generousuario {
@@ -62,13 +76,25 @@ label {
 	padding: 4;
 }
 
+#insiragenero {
+	color: red;
+	margin-left: 600px;
+	margin-top: -30px;
+}
+
 #senhausuario {
 	width: 400px;
 	display: inline;
 	padding: 4;
 }
  
-.lugardasenha small {
+#emailinvalido{
+	color: red;
+	margin-left: 600px;
+
+}
+
+#senhainvalida {
 	margin-left: 600px;
 	color: grey;
 	position: absolute;
@@ -82,9 +108,9 @@ label {
 
 .lugardaconfirmacao small {
 	color: red;
-	margin-left: 600px;
+	margin-left: 715px;
 	position: absolute;
-	margin-top: -20px;
+	margin-top: -25px;
 	left: 160px;
 }
 
