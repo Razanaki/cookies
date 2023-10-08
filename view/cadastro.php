@@ -11,41 +11,54 @@ include_once("header.php");
 			<h3> Cadastro </h3>
 		<form class="form-group">
 
+			<div class="lugardoemail">	
 		    <label for="emailusuario">Email address:</label>
-		    <input type="email" class="form-control" name="emailusuario" id="emailusuario" placeholder="nome@exemplo.com" autocomplete="on" required> <br> </br>
+		    <input type="email" class="form-control" name="emailusuario" id="emailusuario" placeholder="nome@exemplo.com" autocomplete="on" onblur="Email()" required> <br> </br>
+			<small id="emailinvalido" style="display:none">O email inserido não é valido.</small>
+			</div>
 
+			<div class="lugardaconta">
 			<label for="contausuario">Usuário:</label>
 			<input type="text" class="form-control" name="contausuario" id="contausuario" required> <br> </br>
+			</div>
 
+			<div class="lugardonome">
 			<label for="nomeusuario">Nome:</label>
-			<input type="text" class="form-control" name="nomeusuario" id="nomeusuario" required> <br> </br>
+			<input type="text" class="form-control" name="nomeusuario" id="nomeusuario" onblur="Nome()" required> <br> </br>
+			<small id="nomeinvalido" style="display:none">Insira um nome.</small>
+			</div>
 
+			<div class="lugardosobrenome">
 			<label for="sobrenomeusuario">Sobrenome:</label>
-			<input type="text" class="form-control" name="sobrenomeusuario" id="sobrenomeusuario" required> <br> </br>
+			<input type="text" class="form-control" name="sobrenomeusuario" id="sobrenomeusuario" onblur="Sobrenome()" required> <br> </br>
+			<small id="sobrenomeinvalido" style="display:none">Insira um sobrenome.</small>
+			</div>
 
+			<div class="lugardogenero">
 				<label for="generousuario">Gênero: </label>
-						<select id="generousuario" name="genero" class="form-control" placeholder="Gênero" required >
+						<select id="generousuario" name="genero" class="form-control" placeholder="Gênero" onblur="Genero()" required >
 							<option selected></option>
 							<option>Feminino</option>
 							<option>Masculino</option>
 							<option>Não-binário</option>
 						</select> <br> </br>
-					
+						<small id="insiragenero" style="display:none">Por favor inserior um gênero válido. </small>
+			</div>		
 
 			<div class="lugardasenha">
 				<label for="senhausuario">Senha:</label>
-				<input type="password" class="form-control" id="senhausuario" name="senhausuario" minlength="8" maxlength="20" onblur="SenhaEConfirmacao()" required> <br> </br>
-				<small> A senha deve ter de 8 a 20 caracteres, uma letra maiúscula, um caractere especial e número.</small> <br> </br>
+				<input type="password" class="form-control" id="senhausuario" name="senhausuario" minlength="8" maxlength="20" onblur="Senha()" required> <br> </br>
+				<small id="senhainvalida"> A senha deve ter de 8 a 20 caracteres, uma letra maiúscula, um caractere especial e número.</small> <br> </br>
 			</div>
 
 	
 			<div class="lugardaconfirmacao">
 				<label for="confirmacaosenha">Confirme sua senha:</label>
-				<input type="password" class="form-control" id="confirmacaosenha" name="confirmacaosenha"  minlength="8" maxlength="20" onblur="SenhaEConfirmacao()"required> <br> </br>
+				<input type="password" class="form-control" id="confirmacaosenha" name="confirmacaosenha"  minlength="8" maxlength="20" onblur="ConfirmacaoSenha()"required> <br> </br>
 				<small id="aviso" style="display:none">  As senhas não correspondem.</small> <br> </br>
 			</div>
 
-
+		
 			<label for="termosdeuso">Termos de uso:</label>
 			<textarea name="texto" id="termosdeuso" rows="30" cols="80" disabled>
 Última atualização: Setembro, 2023.
