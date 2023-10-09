@@ -12,14 +12,16 @@
 		$emailusuario = !empty($_POST['emailusuario']) ? $_POST['emailusuario'] : '';
 		$generousuario = !empty($_POST['genero']) ? $_POST['genero'] : '';
 		$senhausuario = !empty($_POST['senhausuario']) ? $_POST['senhausuario'] : '';
+		$senhausuario_hash = password_hash($senhausuario, PASSWORD_DEFAULT);
 
-		$sql = "INSERT INTO usuario (usuario, nome, sobrenome, email, genero, senha) values ('$contausuario', '$nomeusuario', '$sobrenomeusuario', '$emailusuario', '$generousuario', '$senhausuario')";
+		$sql = "INSERT INTO usuario (usuario, nome, sobrenome, email, genero, senha) values ('$contausuario', '$nomeusuario', '$sobrenomeusuario', '$emailusuario', '$generousuario', '$senhausuario_hash')";
 
 		mysqli_query($conn, $sql);
-		echo "'$emailusuario', '$contausuario', '$nomeusuario', '$sobrenomeusuario', '$generousuario', '$senhausuario'";
+		echo "'$emailusuario', '$contausuario', '$nomeusuario', '$sobrenomeusuario', '$generousuario', '$senhausuario', '$senhausuario_hash'";
 		mysqli_close($conn);
 
 
 
 		
 ?>
+
