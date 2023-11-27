@@ -50,6 +50,20 @@ label {
 	padding: 4;
 }
 
+#usuarioinvalido {
+	color: red;
+    margin-left: 655px;
+    position: absolute;
+    margin-top: -20px;
+}
+
+#usuarioexiste{
+	color: red;
+    margin-left: 655px;
+    position: absolute;
+    margin-top: -20px;
+}
+
 #nomeinvalido {
     color: red;
     margin-left: 655px;
