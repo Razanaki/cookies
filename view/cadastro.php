@@ -19,7 +19,9 @@ include_once("header.php");
 
 			<div class="lugardaconta">
 			<label for="contausuario">Usuário:</label>
-			<input type="text" class="form-control" name="contausuario" id="contausuario" required> <br> </br>
+			<input type="text" class="form-control" name="contausuario" onblur="Usuario()" id="contausuario" required> <br> </br>
+			<small id="usuarioinvalido" style="display:none">Insira um usuário.</small>
+			<small id="usuarioexiste" style="display:none">Usuário já existe.</small>
 			</div>
 
 			<div class="lugardonome">
