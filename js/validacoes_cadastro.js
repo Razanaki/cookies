@@ -88,3 +88,19 @@ function Sobrenome(){
         botao.disabled = false;
     }
 }
+
+function Usuario(){
+    var usuario = document.getElementById("contausuario");
+    var usuarioinvalido = document.getElementById("usuarioinvalido");
+    var usuarioexiste = document.getElementById("usuarioexiste");
+    var botao = document.getElementById("botao");
+
+    if (usuario.value === '') {
+        usuarioinvalido.style.display= 'block';
+        botao.disabled = true;
+    } else {
+        usuarioinvalido.style.display = 'none';
+        botao.disabled = false;
+    }
+
+}
