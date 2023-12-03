@@ -1,9 +1,10 @@
-
 <link rel="stylesheet" href="../css/cadastro.css">
 <?php 
 include_once("header.php");	
+global $botao;
 ?>
 		<script src="../js/validacoes_cadastro.js"></script>
+
 <body>
 
 	<form action="../connect/conexao_cadastro.php" method="post" onpageshow="SenhaEConfirmacao()">
@@ -15,13 +16,14 @@ include_once("header.php");
 		    <label for="emailusuario">Email address:</label>
 		    <input type="email" class="form-control" name="emailusuario" id="emailusuario" placeholder="nome@exemplo.com" autocomplete="on" onblur="Email()" required> <br> </br>
 			<small id="emailinvalido" style="display:none">O email inserido não é valido.</small>
+			<small id="emailexiste" style="display:none">Email em uso.</small>
 			</div>
 
 			<div class="lugardaconta">
 			<label for="contausuario">Usuário:</label>
 			<input type="text" class="form-control" name="contausuario" onblur="Usuario()" id="contausuario" required> <br> </br>
 			<small id="usuarioinvalido" style="display:none">Insira um usuário.</small>
-			<small id="usuarioexiste" style="display:none">Usuário já existe.</small>
+			<small id="usuarioexiste" style="display:none">Usuário em uso.</small>
 			</div>
 
 			<div class="lugardonome">
@@ -126,7 +128,7 @@ Ao usar o Marketplace de Biscoitos, você concorda em cumprir estes Termos de Us
 			<label class="check" for="checkacordo"> Li e concordo com os termos de uso.</label> <br> </br>
 	
 	 
-  			<button type="submit" class="btn btn-primary" id="botao" name="botao">Cadastrar</button>
+  			<button type="submit" class="btn btn-primary" id="botao" name="botao" <?php if ($botao) echo 'disabled';?>>Cadastrar</button>
 		</form>
 
 
