@@ -53,7 +53,6 @@ if ($usuarioResult > 0) {
 
 } elseif ($emailResult > 0) {
 		include_once '..\view\cadastro.php';
-	echo "Erro: O email já está em uso. Por favor, escolha outro email.";
 
 	echo '<script type="text/javascript">
 	window.onload = function () {alert("Erro: O email já está em uso. Por favor, escolha outro email.")}
@@ -65,17 +64,14 @@ if ($usuarioResult > 0) {
         $sql = "INSERT INTO usuario (usuario, nome, sobrenome, email, genero, senha) values (?, ?, ?, ?, ?, ?)";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([$contausuario, $nomeusuario, $sobrenomeusuario, $emailusuario, $generousuario, $senhausuario_hash]);
-        echo "Inserção bem-sucedida!";
 		} 
 		catch (PDOException $e) {
     		echo "Erro ao inserir no banco de dados: " . $e->getMessage();
 		}
 }
 	
-
-		echo "'$emailusuario', '$contausuario', '$nomeusuario', '$sobrenomeusuario', '$generousuario', '$senhausuario', '$senhausuario_hash'";
-
-
+		include_once '..\view\confirmacaocadastro.php';
+		
 
 mysqli_close($conn);
 
