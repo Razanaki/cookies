@@ -6,7 +6,7 @@
 				. mysqli_connect_error());
 		}
 
-		include_once '..\view\cadastro.php';
+
 
 		$host = 'localhost';
 		$dbname = 'bixcoito'; 
@@ -44,11 +44,20 @@
 
 
 if ($usuarioResult > 0) {
-	 echo "Erro: O usuário já existe. Escolha outro nome de usuário.";
+	include_once '..\view\cadastro.php';
+
+	 echo '<script type="text/javascript">
+		window.onload = function () {alert("Erro: O usuário já existe. Escolha outro nome de usuário.")}
+	 </script>';
 
 
 } elseif ($emailResult > 0) {
+		include_once '..\view\cadastro.php';
 	echo "Erro: O email já está em uso. Por favor, escolha outro email.";
+
+	echo '<script type="text/javascript">
+	window.onload = function () {alert("Erro: O email já está em uso. Por favor, escolha outro email.")}
+ </script>';
 
 } else {
 
