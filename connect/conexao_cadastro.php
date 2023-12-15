@@ -14,10 +14,6 @@
 		$password = ''; 
 		$pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
 
-		$botao = ['botao'];
-		$emailinvalido = ['emailinvalido'];
-		$emailexiste = ['emailexiste'];
-	
 		
 		$contausuario = !empty($_POST['contausuario']) ? $_POST['contausuario'] : '';
 		$nomeusuario = !empty($_POST['nomeusuario']) ? $_POST['nomeusuario'] : '';
@@ -76,4 +72,3 @@ if ($usuarioResult > 0) {
 mysqli_close($conn);
 
 ?>
-
