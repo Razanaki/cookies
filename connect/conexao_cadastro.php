@@ -6,7 +6,15 @@
 				. mysqli_connect_error());
 		}
 
+        use PHPMailer\PHPMailer\PHPMailer;
+        use PHPMailer\PHPMailer\Exception;
+		use PHPMailer\PHPMailer\SMTP;
+		
+        require '..\PHPMailer\src\Exception.php';
+        require '..\PHPMailer\src\PHPMailer.php';
+        require '..\PHPMailer\src\SMTP.php';
 
+        
 
 		$host = 'localhost';
 		$dbname = 'bixcoito'; 
@@ -60,6 +68,52 @@ if ($usuarioResult > 0) {
         $sql = "INSERT INTO usuario (usuario, nome, sobrenome, email, genero, senha) values (?, ?, ?, ?, ?, ?)";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([$contausuario, $nomeusuario, $sobrenomeusuario, $emailusuario, $generousuario, $senhausuario_hash]);
+
+		try {
+			$mail = new PHPMailer(true);
+	          
+			$mail->isSMTP();                                       
+			$mail->Host       = 'smtp.gmail.com';               
+			$mail->SMTPAuth   = true;                              
+			$mail->Username   = 'biscoiteiras.suporte@gmail.com';                   
+			$mail->Password   = 'nkpv tlsp xmdt hxzf';                             
+			$mail->SMTPSecure = 'ssl';       
+			$mail->Port       = 465;                                  
+
+			$mail->setFrom('biscoiteiras.suporte@gmail.com', 'O Portal das Biscoiteiras');
+			$mail->addAddress($emailusuario, $username);   
+			$mail->addReplyTo('biscoiteiras.suporte@gmail.com', 'Suporte das Biscoiteiras');
+
+			$mail->CharSet = "UTF-8";
+			$mail->WordWrap = 50;  
+
+
+			$mail->isHTML(true);                                
+			$mail->Subject = 'Cadastro realizado com sucesso!';
+			$mail->Body    = "
+
+			Olá $contausuario  <br> <br>
+
+			Obrigado por se cadastrar em nosso sistema! Para garantir que receba nossas atualizações e informações importantes, por favor, confirme seu endereço de e-mail clicando no link abaixo: <br> 
+
+			[Link de confirmação]
+
+			<br> <br>
+			Se você não realizou este cadastro, por favor, desconsidere este e-mail. <br> 
+
+			Estamos empolgados em tê-lo(a) como parte da nossa comunidade! Se precisar de alguma assistência, não hesite em nos contatar. <br> <br>
+
+			Atenciosamente, <br> 
+
+			A Equipe Biscoiteira
+
+			";
+			$mail->send();
+			}
+			catch  (Exception $e) {
+				echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+			}
+
 		} 
 		catch (PDOException $e) {
     		echo "Erro ao inserir no banco de dados: " . $e->getMessage();
@@ -68,6 +122,8 @@ if ($usuarioResult > 0) {
 	
 		include_once '..\view\confirmacaocadastro.php';
 		
+
+
 
 mysqli_close($conn);
 
