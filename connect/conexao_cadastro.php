@@ -32,6 +32,7 @@
 		$senhausuario = !empty($_POST['senhausuario']) ? $_POST['senhausuario'] : '';
 		$senhausuario_hash = password_hash($senhausuario, PASSWORD_DEFAULT);
 
+		$usuario_hash = password_hash($contausuario, PASSWORD_DEFAULT);
 
 
 		$checausuario = "SELECT COUNT(*) AS totalusuario FROM USUARIO WHERE USUARIO = ?";
@@ -44,6 +45,7 @@
 		$emailExiste->execute([$emailusuario]);
 		$emailResult = $emailExiste->fetchColumn();
 
+		$link = "http://localhost/cookies/connect/confirmacaoemail.php?token=" . $usuario_hash;
 
 
 
@@ -65,9 +67,9 @@ if ($usuarioResult > 0) {
 } else {
 
     try {
-        $sql = "INSERT INTO usuario (usuario, nome, sobrenome, email, genero, senha) values (?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO usuario (usuario, nome, sobrenome, email, genero, senha, usuario_hash) values (?, ?, ?, ?, ?, ?, ?)";
         $stmt = $pdo->prepare($sql);
-        $stmt->execute([$contausuario, $nomeusuario, $sobrenomeusuario, $emailusuario, $generousuario, $senhausuario_hash]);
+        $stmt->execute([$contausuario, $nomeusuario, $sobrenomeusuario, $emailusuario, $generousuario, $senhausuario_hash, $usuario_hash]);
 
 		try {
 			$mail = new PHPMailer(true);
@@ -96,7 +98,7 @@ if ($usuarioResult > 0) {
 
 			Obrigado por se cadastrar em nosso sistema! Para garantir que receba nossas atualizações e informações importantes, por favor, confirme seu endereço de e-mail clicando no link abaixo: <br> 
 
-			[Link de confirmação]
+			$link
 
 			<br> <br>
 			Se você não realizou este cadastro, por favor, desconsidere este e-mail. <br> 
