@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="../lib/owl-carousel2/assets/owl.theme.default.min.css">
 		<link rel="stylesheet" href="../fontawesome/css/all.css">
 		<link rel="stylesheet" href="../css/header.css">
-
+		<script src="../js/logotipo.js"></script>
 	</head>
 
 	<header>
@@ -48,10 +48,10 @@
 	</div>
 
 	</div>
-	<div class="container">
-	<a href="index.php"><img id="logotipo" src="../img/biscoito.png" alt="Logotipo" onclick="aumentarImagem()"></a>
+	<div class="container">	
+	
+	<a href="../view/index.php"><img id="logotipo" src="../img/biscoito.png" alt="Logotipo" onclick="aumentarImagem()"></a>
 	</div>
 
-	<script src="../js/logotipo.js"></script>
 
 	</header>
