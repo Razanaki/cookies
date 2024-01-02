@@ -5,7 +5,7 @@ include_once("../view/header.php");
 <?php
 
     $token = $_GET['token'];
-    echo "$token \n";
+
     $conn = mysqli_connect("localhost", "root", "", "bixcoito");
     if ($conn === false) {
         echo("Erro: não conectou."
@@ -33,11 +33,11 @@ include_once("../view/header.php");
         $alterastatus = "UPDATE usuario SET statusconta = 1 WHERE usuario_hash = '$token'";
         $updateResultado = $pdo->query($alterastatus);
 
-    
-            echo('Deu certo sua puta');
+        header('Location: ../view/confirmacao_sucesso.php');
+      
         
     } else {
-        echo " Token inválido ou expirado.";
+        header('Location: ../view/confirmacao_falhou.php');
     }
 
     $conn->close();
