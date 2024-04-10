@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 	$conn = mysqli_connect("localhost", "root", "", "bixcoito");
 		if ($conn === false) {
 			echo("Erro: não conectou."
@@ -29,9 +28,10 @@
 		$emailusuario = !empty($_POST['emailusuario']) ? $_POST['emailusuario'] : '';
 		$generousuario = !empty($_POST['genero']) ? $_POST['genero'] : '';
 
+		$caseinsensitive = mb_strtolower($contausuario,"UTF-8");
+
 		$senhausuario = !empty($_POST['senhausuario']) ? $_POST['senhausuario'] : '';
 		$senhausuario_hash = password_hash($senhausuario, PASSWORD_DEFAULT);
-
 		$usuario_hash = password_hash($contausuario, PASSWORD_DEFAULT);
 
 
@@ -67,9 +67,9 @@ if ($usuarioResult > 0) {
 } else {
 
     try {
-        $sql = "INSERT INTO usuario (usuario, nome, sobrenome, email, genero, senha, usuario_hash) values (?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO usuario (usuario, caseinsensitive, nome, sobrenome, email, genero, senha, usuario_hash) values (?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $pdo->prepare($sql);
-        $stmt->execute([$contausuario, $nomeusuario, $sobrenomeusuario, $emailusuario, $generousuario, $senhausuario_hash, $usuario_hash]);
+        $stmt->execute([$contausuario, $caseinsensitive ,$nomeusuario, $sobrenomeusuario, $emailusuario, $generousuario, $senhausuario_hash, $usuario_hash]);
 
 		try {
 			$mail = new PHPMailer(true);
@@ -128,5 +128,3 @@ if ($usuarioResult > 0) {
 
 
 mysqli_close($conn);
-
-?>
