@@ -2,8 +2,12 @@
 <?php 
 include_once("header.php");	
 global $botao;
+
+$emailtemporario = !empty($_POST['email']) ? $_POST['email'] : '';
+
 ?>
 		<script src="../js/validacoes_cadastro.js"></script>
+
 
 <body>
 
@@ -14,7 +18,7 @@ global $botao;
 
 			<div class="lugardoemail">	
 		    <label for="emailusuario">Email address:</label>
-		    <input type="email" class="form-control" name="emailusuario" id="emailusuario" placeholder="nome@exemplo.com" autocomplete="on" onblur="Email()" required> <br> </br>
+		    <input type="email" class="form-control" name="emailusuario" id="emailusuario" placeholder="nome@exemplo.com" value="<?php echo ( isset( $_POST["emaillogin"] ) ? $_POST["emaillogin"] : '' ); ?>" onblur="Email()" required> <br> </br>
 			<small id="emailinvalido" style="display:none">O email inserido não é valido.</small>
 			<small id="emailexiste" style="display:none">Email em uso.</small>
 			</div>
