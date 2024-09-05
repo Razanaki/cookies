@@ -38,6 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         echo "<br>A senha correta é " . $senhaResult ;
                         echo "<br>A senha fornecida no login é " . $senhausuario_hash ;
                         }
+
+
                                 if ((password_verify($senhalogin, $senhaResult)) != 1) {
                                     echo "<br>Senha incorreta!";
                                     echo "<br>A senha correta é " . $senhaResult ;
