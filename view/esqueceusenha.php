@@ -1,6 +1,5 @@
 <link rel="stylesheet" href="../css/esqueceusenha.css">
 <?php include_once("header.php");
-include("..\connect\conexao_login.php");
 ?>
 
 <script src="../js/validacoes_redefinesenha.js"></script>
@@ -22,7 +21,7 @@ include("..\connect\conexao_login.php");
             <br>
             <input type="email" class="form-control" name="email" id="email" placeholder="nome@exemplo.com" onblur="Email()" required>
             <small id="naoexiste" style="display:none">Email inválido.</small>
-            <small id="teste" style="display:none">Email não existe.</small>
+ 
             <br>
             <br>
     
