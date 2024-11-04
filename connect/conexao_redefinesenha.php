@@ -37,9 +37,9 @@ $emailExiste->execute([$emailcaseinsensitive]);
 $emailResult = $emailExiste->fetchColumn();
 
 $url = bin2hex(random_bytes(32));
-$hora = date("h:i:sa");
+$hora = date('d-m-y h:i:s');
 
-$link = "http://localhost/cookies/connect/redefinesenha.php?token=" . $url;
+$link = "http://localhost/cookies/view/redefinesenha.php?token=" . $url;
 
 
 if ($emailResult < 1) {
